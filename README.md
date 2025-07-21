@@ -7,7 +7,7 @@ It allows you to define a list of tasks with names and associated functions, and
 ## ⚙️ Installation
 
 ```bash
-go get github.com/henrylrech/yuki@1.0.0
+go get github.com/henrylrech/yuki@v1.0.0
 ```
 
 ## ⚡️ Usage
