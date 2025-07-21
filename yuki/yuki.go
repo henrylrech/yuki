@@ -22,7 +22,7 @@ func run_tasks(tasks []Task, should_log bool) {
 
 	for _, task := range tasks {
 		msg := fmt.Sprintf("executing %s", task.Name)
-		yuki_log(msg, should_log)
+		yuki_log(msg, true)
 		task.Func()
 	}
 
