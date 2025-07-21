@@ -31,6 +31,19 @@ func run_tasks(tasks []Task, should_log bool) {
 	yuki_log(fmt.Sprintf("ending tasks at %s (duration: %s)", end.Format("15:04:05"), duration), should_log)
 }
 
+// Execute runs a given list of tasks sequentially at a fixed time interval.
+//
+// It starts by executing the tasks immediately in a separate goroutine, then
+// continues to execute them periodically based on the provided interval.
+//
+// Parameters:
+//   - tasks: A slice of Task structs, each containing a name and a function to execute.
+//   - time_interval: The duration between each execution cycle.
+//   - verbose: If true, logs the start and end of each task.
+//
+// Example:
+//
+//	Execute(tasks, time.Second*10, true)
 func Execute(tasks []Task, time_interval time.Duration, verbose bool) {
 
 	ticker := time.NewTicker(time_interval)
