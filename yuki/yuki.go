@@ -1,3 +1,6 @@
+// Yuki ❄️ is a small Go library for scheduled execution of tasks with support for intervals and custom functions.
+//
+// It allows you to define a list of tasks with names and associated functions, and execute them sequentially at a fixed time interval.
 package yuki
 
 import (
